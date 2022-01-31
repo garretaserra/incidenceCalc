@@ -1,0 +1,25 @@
+{
+  "name": "express_base",
+  "version": "1.0.0",
+  "description": "A basic imlementation of express with NodeJS in Typescript",
+  "main": "app.ts",
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc -w",
+    "start": "tsc && node build/app.js",
+    "start-watch": "concurrently --kill-others \"tsc -w\" \"nodemon build/app.js\""
+  },
+  "author": "Sergi Garreta",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.13",
+    "cors": "latest",
+    "errorhandler": "latest",
+    "express": "^4.17.1",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
