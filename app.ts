@@ -5,7 +5,7 @@ import cors = require('cors');
 import errorHandler = require('errorhandler');
 
 // Import routes
-import testRouter = require('./routes/test');
+import incidenceRoute from '././routes/incidenceRoutes';
 
 // Server variable initialization
 let app = express();
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(errorHandler());
 
-app.use('/test', testRouter);
+app.use('/', incidenceRoute);
 
 
 // Make app listen on port 3000
